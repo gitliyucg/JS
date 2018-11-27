@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			//闭包简单的说就是一个函数能访问外部函数的变量，这就是闭包
+			//闭包可以作为一个函数的返回值，或者是作为参数被传递
+			// function a(x){
+			// 	var trem = 5;
+			// 	function b(y){
+			// 		console.log(x + y + trem)
+			// 	}
+			// 	return b(9)
+			// }
+
+			// var aa = a(6);
+
+			// var arr = [451, 1235, 162, 456, 871];
+
+			// for (var i = 0; i < arr.length; i++) {
+			// 	(function(i){
+			// 		setTimeout(function(){
+			// 			console.log(i)
+			// 		}, 0)
+			// 	})(i)
+			// }
+
+			// function f1(){
+			// 	var a = 10;
+			// 	console.log(a);
+			// }
+			//
+			// f1();
+
+			function f1(){
+				var a = 0;
+				function f2() {
+					console.log(a);
+				}
+				return f2()
+			}
+
+			f1()
+
+		</script>
+
+	</body>
+</html>

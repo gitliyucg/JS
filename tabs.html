@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选项卡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .action{
+            background: red !important;
+        }
+        a{
+            background: #3333;
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+        }
+        div{
+            display: none;
+            width: 159px;
+            height: 159px;
+            text-align: center;
+            line-height: 150px;
+            background: red;
+            margin-top: 20px;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:;" class="action">1</a>
+    <a href="javascript:;">2</a>
+    <a href="javascript:;">3</a>
+    <div class="show">111</div>
+    <div>222</div>
+    <div>333</div>
+    <script>
+
+//        window.onload = function () {
+//            //获取元素
+//            var a = document.getElementsByTagName('a');
+//            var div = document.getElementsByTagName('div');
+//            for(var i = 0; i < a.length; i++){
+//                a[i].index = i;
+//                a[i].onclick = function () {
+//                    for(var i = 0; i < a.length; i++){
+//                        a[i].className = '';
+//                        div[i].className = '';
+//                    }
+//                    this.className = 'action';
+//                    div[this.index].className = 'show';
+//                }
+//            }
+//        }
+        
+        // window.onload = function () {
+        //     var a = document.getElementsByTagName('a');
+        //     var div = document.getElementsByTagName('div');
+        //     for (var i = 0; i < a.length; i++){
+        //         a[i].index = i;
+        //         a[i].onclick = function () {
+        //             for(var i = 0; i < a.length; i++){
+        //                 a[i].className = '';
+        //                 div[i].className = '';
+        //             }
+        //             this.className = 'action';
+        //             div[this.index].className = 'show';
+        //         }
+        //     }
+        // }
+
+        window.onload = function(){
+            var a = document.getElementsByTagName('a');
+            var div = document.getElementsByTagName('div');
+            for(var i = 0; i < a.length; i++){
+                a[i].index = i;
+                a[i].onclick = function(){
+                    for (var i = 0; i < a.length; i++) {
+                        a[i].className = '';
+                        div[i].className = '';
+                    }
+                    this.className = 'action';
+                    div[this.index].className = 'show';
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

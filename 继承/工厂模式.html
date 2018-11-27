@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Per(a, b, c){
+			var o = new Object();
+			o.a = a;
+			o.b = b;
+			o.c = c;
+			o.d = function(){
+				console.log('haha')
+			}
+			return o;
+		}
+		var f = 10;
+		while(f--){
+			console.log(Per(f, f, f))
+		}
+	</script>
+</body>
+</html>

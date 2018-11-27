@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style media="screen">
+			.box{
+				width: 100%;
+				overflow: hidden;
+				height: 90px;
+				border: 1px solid #ccc;
+			}
+
+			ul{
+				list-style: none;
+				margin: 0;
+			}
+
+			ul li{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<div class="box">
+			<ul>
+				<li>1.新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</li>
+				<li>2.新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</li>
+				<li>3.新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</li>
+				<li>4.新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</li>
+				<li>5.新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</li>
+				<li>6.新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</li>
+				<li>7.新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</li>
+				<li>8.新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</li>
+				<li>9.新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</li>
+			</ul>
+		</div>
+
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">
+
+			var $uList = $("ul");
+
+			setInterval(function(){
+				var scrollHeight = $("ul li:first").height();
+		        //滚动出一个<li>的高度
+		        $uList.animate({
+		            marginTop: -scrollHeight
+		        },
+		        2000,
+		        function() {
+		            //动画结束后，将当前<ul>marginTop置为初始值0状态，再将第一个<li>拼接到末尾。
+		            $uList.css({
+		                marginTop: 0
+		            }).find("li:first").appendTo($uList);
+		        });
+			}, 0)
+
+		</script>
+
+	</body>
+</html>

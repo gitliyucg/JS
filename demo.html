@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var data = {
+			name: 'haha',
+			age: 20
+		}
+		var temp = 'My Name is {$name}, My Age is {$age}'
+
+		function show(temp, data){
+			// var str = temp.split('{');
+			return temp.split('{')[0] + data['name'] + temp.split('{')[1].split('}')[1] + data['age'];
+
+		}
+		console.log(show(temp,data))
+	</script>
+</body>
+</html>

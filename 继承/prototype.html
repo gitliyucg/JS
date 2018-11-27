@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Meom(){};
+		Meom.prototype.a = 1;
+		Meom.prototype.b = function(){
+			alert('123');
+		}
+		var M0 = new Meom()
+		var M1 = new Meom()
+
+		// console.log(M0.__proto__ == Meom.prototype);
+		console.log(M0.constructor == Meom)
+
+	</script>
+</body>
+</html>

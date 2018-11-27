@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var url = 'https://www.cnblogs.com?a=aa&b=bb&c=cc';
+		function URL(url){
+			if(url.indexOf('?') == -1){
+				alert('没有参数');
+				return;
+			}else{
+				var arg = url.split('?')[1].split('&');
+				var obj = new Object();
+				for(var i = 0; i < arg.length; i++){
+					obj[arg[i].split('=')[0]] = arg[i].split('=')[1];					
+				}	
+				return obj;
+			}
+		}
+	</script>
+</body>
+</html>

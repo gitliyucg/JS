@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var oldArr = [
+        {id:1,name:"zhangs",age:18,contact_id:1},
+        {id:2,name:"zhangs",age:18,contact_id:2},
+        {id:2,name:"zhangs",age:18,contact_id:3},
+        {id:3,name:"zhangs",age:18,contact_id:14},
+        {id:4,name:"zhangs",age:18,contact_id:3},
+        {id:5,name:"zhangs",age:18,contact_id:2},
+        {id:6,name:"zhangs",age:18,contact_id:1},
+        {id:6,name:"zhangs",age:18,contact_id:1}
+    ];//原数据数组
+    var newArr = [];
+
+    for(var i = 0; i < oldArr.length; i++){
+        var bool = true;
+        for(var s = 0; s < newArr.length; s++){
+            if (oldArr[i]['id'] == newArr[s]['id']){
+                bool = false;
+            }
+        }
+        if (bool){
+            newArr.push(oldArr[i])
+        }
+    }
+    console.log(newArr)
+
+</script>
+</body>
+</html>

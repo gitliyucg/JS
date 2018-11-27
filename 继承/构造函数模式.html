@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Per(a, b, c){
+			this.a = a;
+			this.b = b;
+			this.c = c;
+			this.d = function(){
+				alert('haha')
+			}
+		}
+		var f = 10;
+		while(f--){
+			console.log(new Per(f, f, f))
+		}
+	</script>
+</body>
+</html>
